@@ -5,8 +5,10 @@
 # frame tag_pose.tag_in_robot reports.
 #   x, y   meters
 #   theta  radians, counter-clockwise from the entrance tag's x axis
-# Converted from the Lab 6 TRANSFORMS, which put y out of the face and x to
-# the tag's right: (x, y, theta) there is (y, -x, theta) here.
+# Recomputed from /luigi/apriltag_detector_node/detections (frames with all of
+# tags 20, 24, 25, 26, 33 in view, averaged), using tag_pose.tag_in_robot's
+# frame math: stall pose = inverse(entrance pose) * stall pose. x is negative
+# because the stalls sit behind the entrance tags' printed faces.
 
 entrances:
   - tag: 20
@@ -17,13 +19,13 @@ entrances:
 stalls:                 # the stall number from the GUI is the index in this list
   - tag: 24
     pose:               # keyed by entrance tag
-      20: {x: 0.6110, y: -0.0873, theta:  0.3459}   # 19.8 deg
-      33: {x: 0.6256, y:  0.4228, theta:  0.2395}   # 13.7 deg
+      20: {x: -0.5646, y:  0.1652, theta:  0.3299}   # 18.9 deg
+      33: {x: -0.5314, y: -0.5405, theta:  0.2982}   # 17.1 deg
   - tag: 25
     pose:
-      20: {x: 0.6347, y: -0.4392, theta: -0.0284}   # -1.6 deg
-      33: {x: 0.6116, y:  0.0701, theta: -0.1360}   # -7.8 deg
+      20: {x: -0.5696, y:  0.3536, theta: -0.0177}   # -1.0 deg
+      33: {x: -0.5304, y: -0.3519, theta: -0.0494}   # -2.8 deg
   - tag: 26
     pose:
-      20: {x: 0.6220, y: -0.2719, theta:  0.2062}   # 11.8 deg
-      33: {x: 0.6166, y:  0.2378, theta:  0.0988}   # 5.7 deg
+      20: {x: -0.5953, y:  0.5201, theta:  0.1435}   # 8.2 deg
+      33: {x: -0.5508, y: -0.1847, theta:  0.1118}   # 6.4 deg
