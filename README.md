@@ -1,47 +1,62 @@
-# Template: template-ros
+# ECEN 433 - Final Project: Campus Navigation
 
-This template provides a boilerplate repository
-for developing ROS-based software in Duckietown.
+Your Duckiebot gets a starting road, a list of places to visit and a parking
+stall. It drives the route through the city on its own, then parks.
 
-**NOTE:** If you want to develop software that does not use
-ROS, check out [this template](https://github.com/duckietown/template-basic).
-
-
-## How to use it
-
-### 1. Fork this repository
-
-Use the fork button in the top-right corner of the github page to fork this template repository.
+The project description lives on the course site. This README covers the
+repository: what is in it, and how to build and run it.
 
 
-### 2. Create a new repository
+## What's here
 
-Create a new repository on github.com while
-specifying the newly forked template repository as
-a template for your new repository.
+`packages/intersection_control/`
+
+| File | What it is |
+| --- | --- |
+| `src/duckietown_map.py` | The city: intersections, roads, lengths, and which turn leads where |
+| `src/route_gui_node.py` | Map window for sending routes and watching progress |
+| `src/tag_pose.py` | AprilTag detection → tag pose in the robot frame |
+| `src/tag_db.py` | AprilTag id → sign type (from Lab 6) |
+| `src/switch_on_node.py` | Turns on the stop line filter and tag detector (from Lab 6) |
+| `config/parking_lot.yaml` | Parking lot tags and the transforms between them |
+| `launch/intersections.launch` | Runs on the robot |
+| `launch/route_gui.launch` | Runs on your laptop |
+
+Bring in your own nodes from Lab 6 and your robot's `config/DUCKIEBOT_NAME.yaml`.
 
 
-### 3. Define dependencies
+## Building and running
 
-List the dependencies in the files `dependencies-apt.txt` and
-`dependencies-py3.txt` (apt packages and pip packages respectively).
+On the robot, with your Lab 4 stack already running:
 
+```bash
+dts devel build -H DUCKIEBOT_NAME -f
+dts devel run   -H DUCKIEBOT_NAME -L intersections
+```
 
-### 4. Place your code
+On your laptop, the route GUI talking to the robot:
 
-Place your code in the directory `/packages/` of
-your new repository.
+```bash
+dts devel build -f
+dts devel run -R DUCKIEBOT_NAME -L route-gui -X
+```
 
+Or with no robot at all:
 
-### 5. Setup launchers
+```bash
+dts devel run -L route-gui -X ++ test:=true
+```
 
-The directory `/launchers` can contain as many launchers (launching scripts)
-as you want. A default launcher called `default.sh` must always be present.
+Anything after `++` is passed to `roslaunch`.
 
-If you create an executable script (i.e., a file with a valid shebang statement)
-a launcher will be created for it. For example, the script file 
-`/launchers/my-launcher.sh` will be available inside the Docker image as the binary
-`dt-launcher-my-launcher`.
+To attach a second terminal to a container that is already running:
 
-When launching a new container, you can simply provide `dt-launcher-my-launcher` as
-command.
+```bash
+dts devel run attach
+```
+
+New Python nodes must be executable or ROS will not find them:
+
+```bash
+chmod +x packages/intersection_control/src/<node_name>.py
+```

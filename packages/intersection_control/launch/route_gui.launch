@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- Laptop only: the route GUI needs a display. With the robot running, it talks to
+       your nodes in the robot's namespace. test:=true uses the intersections_test
+       namespace instead, so you can try your planner with no robot. -->
+
+  <arg name="test" default="false"/>
+  <arg name="ns" value="intersections_test" if="$(arg test)"/>
+  <arg name="ns" value="$(optenv VEHICLE_NAME duckiebot)" unless="$(arg test)"/>
+
+  <group ns="$(arg ns)">
+    <node pkg="intersection_control" type="route_gui_node.py" name="route_gui_node"
+          output="screen" required="true"/>
+
+    <!-- TODO: with test:=true, start your planner here too (if="$(arg test)"). -->
+  </group>
+
+</launch>

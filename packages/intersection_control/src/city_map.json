@@ -1,0 +1,646 @@
+{
+  "tile_size_m": 0.585,
+  "frame": "origin at SW corner of H1, x east, y north (meters)",
+  "grid": {
+    "rows": "ABCDEFGH",
+    "cols": 8
+  },
+  "intersections": {
+    "1": {
+      "tile": "A3",
+      "center_m": [
+        1.4625,
+        4.3875
+      ],
+      "sides": {
+        "E": 2,
+        "S": 4,
+        "W": 3
+      }
+    },
+    "2": {
+      "tile": "C6",
+      "center_m": [
+        3.2175,
+        3.2175
+      ],
+      "sides": {
+        "N": 1,
+        "E": 6,
+        "S": 5
+      }
+    },
+    "3": {
+      "tile": "D1",
+      "center_m": [
+        0.2925,
+        2.6325
+      ],
+      "sides": {
+        "N": 1,
+        "E": 4,
+        "S": 6
+      }
+    },
+    "4": {
+      "tile": "D3",
+      "center_m": [
+        1.4625,
+        2.6325
+      ],
+      "sides": {
+        "N": 1,
+        "S": 5,
+        "W": 3
+      }
+    },
+    "5": {
+      "tile": "F6",
+      "center_m": [
+        3.2175,
+        1.4625
+      ],
+      "sides": {
+        "N": 2,
+        "S": 6,
+        "W": 4
+      }
+    },
+    "6": {
+      "tile": "H6",
+      "center_m": [
+        3.2175,
+        0.2925
+      ],
+      "sides": {
+        "N": 5,
+        "E": 2,
+        "W": 3
+      }
+    }
+  },
+  "roads": [
+    {
+      "id": 0,
+      "a": 1,
+      "b": 3,
+      "side_a": "W",
+      "side_b": "N",
+      "tiles": [
+        "A3",
+        "A2",
+        "A1",
+        "B1",
+        "C1",
+        "D1"
+      ],
+      "length_m": 2.799,
+      "length_tiles": 4.785,
+      "curves": 1
+    },
+    {
+      "id": 1,
+      "a": 1,
+      "b": 2,
+      "side_a": "E",
+      "side_b": "N",
+      "tiles": [
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "B6",
+        "C6"
+      ],
+      "length_m": 2.799,
+      "length_tiles": 4.785,
+      "curves": 1
+    },
+    {
+      "id": 2,
+      "a": 1,
+      "b": 4,
+      "side_a": "S",
+      "side_b": "N",
+      "tiles": [
+        "A3",
+        "B3",
+        "C3",
+        "D3"
+      ],
+      "length_m": 1.755,
+      "length_tiles": 3.0,
+      "curves": 0
+    },
+    {
+      "id": 3,
+      "a": 3,
+      "b": 4,
+      "side_a": "E",
+      "side_b": "W",
+      "tiles": [
+        "D1",
+        "D2",
+        "D3"
+      ],
+      "length_m": 1.17,
+      "length_tiles": 2.0,
+      "curves": 0
+    },
+    {
+      "id": 4,
+      "a": 3,
+      "b": 6,
+      "side_a": "S",
+      "side_b": "W",
+      "tiles": [
+        "D1",
+        "E1",
+        "F1",
+        "G1",
+        "G2",
+        "H2",
+        "H3",
+        "H4",
+        "H5",
+        "H6"
+      ],
+      "length_m": 4.888,
+      "length_tiles": 8.356,
+      "curves": 3
+    },
+    {
+      "id": 5,
+      "a": 4,
+      "b": 5,
+      "side_a": "S",
+      "side_b": "W",
+      "tiles": [
+        "D3",
+        "E3",
+        "F3",
+        "F4",
+        "F5",
+        "F6"
+      ],
+      "length_m": 2.799,
+      "length_tiles": 4.785,
+      "curves": 1
+    },
+    {
+      "id": 6,
+      "a": 2,
+      "b": 5,
+      "side_a": "S",
+      "side_b": "N",
+      "tiles": [
+        "C6",
+        "D6",
+        "E6",
+        "F6"
+      ],
+      "length_m": 1.755,
+      "length_tiles": 3.0,
+      "curves": 0
+    },
+    {
+      "id": 7,
+      "a": 5,
+      "b": 6,
+      "side_a": "S",
+      "side_b": "N",
+      "tiles": [
+        "F6",
+        "G6",
+        "H6"
+      ],
+      "length_m": 1.17,
+      "length_tiles": 2.0,
+      "curves": 0
+    },
+    {
+      "id": 8,
+      "a": 2,
+      "b": 6,
+      "side_a": "E",
+      "side_b": "E",
+      "tiles": [
+        "C6",
+        "C7",
+        "C8",
+        "D8",
+        "E8",
+        "F8",
+        "G8",
+        "H8",
+        "H7",
+        "H6"
+      ],
+      "length_m": 5.014,
+      "length_tiles": 8.571,
+      "curves": 2
+    }
+  ],
+  "tiles": [
+    [
+      {
+        "tile": "A1",
+        "type": "curve",
+        "sides": "ES",
+        "intersection": null
+      },
+      {
+        "tile": "A2",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "A3",
+        "type": "3way",
+        "sides": "ESW",
+        "intersection": 1
+      },
+      {
+        "tile": "A4",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "A5",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "A6",
+        "type": "curve",
+        "sides": "SW",
+        "intersection": null
+      },
+      {
+        "tile": "A7",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "A8",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "B1",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "B2",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "B3",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "B4",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "B5",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "B6",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "B7",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "B8",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "C1",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "C2",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "C3",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "C4",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "C5",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "C6",
+        "type": "3way",
+        "sides": "NES",
+        "intersection": 2
+      },
+      {
+        "tile": "C7",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "C8",
+        "type": "curve",
+        "sides": "SW",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "D1",
+        "type": "3way",
+        "sides": "NES",
+        "intersection": 3
+      },
+      {
+        "tile": "D2",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "D3",
+        "type": "3way",
+        "sides": "NSW",
+        "intersection": 4
+      },
+      {
+        "tile": "D4",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "D5",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "D6",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "D7",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "D8",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "E1",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "E2",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "E3",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "E4",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "E5",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "E6",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "E7",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "E8",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "F1",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "F2",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "F3",
+        "type": "curve",
+        "sides": "NE",
+        "intersection": null
+      },
+      {
+        "tile": "F4",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "F5",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "F6",
+        "type": "3way",
+        "sides": "NSW",
+        "intersection": 5
+      },
+      {
+        "tile": "F7",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "F8",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "G1",
+        "type": "curve",
+        "sides": "NE",
+        "intersection": null
+      },
+      {
+        "tile": "G2",
+        "type": "curve",
+        "sides": "SW",
+        "intersection": null
+      },
+      {
+        "tile": "G3",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "G4",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "G5",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "G6",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      },
+      {
+        "tile": "G7",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "G8",
+        "type": "straight",
+        "sides": "NS",
+        "intersection": null
+      }
+    ],
+    [
+      {
+        "tile": "H1",
+        "type": "empty",
+        "sides": "",
+        "intersection": null
+      },
+      {
+        "tile": "H2",
+        "type": "curve",
+        "sides": "NE",
+        "intersection": null
+      },
+      {
+        "tile": "H3",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "H4",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "H5",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "H6",
+        "type": "3way",
+        "sides": "NEW",
+        "intersection": 6
+      },
+      {
+        "tile": "H7",
+        "type": "straight",
+        "sides": "EW",
+        "intersection": null
+      },
+      {
+        "tile": "H8",
+        "type": "curve",
+        "sides": "NW",
+        "intersection": null
+      }
+    ]
+  ]
+}
