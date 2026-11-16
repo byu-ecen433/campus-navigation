@@ -17,12 +17,16 @@ repository: what is in it, and how to build and run it.
 | `src/route_gui_node.py` | Map window for sending routes and watching progress |
 | `src/tag_pose.py` | AprilTag detection → tag pose in the robot frame |
 | `src/tag_db.py` | AprilTag id → sign type (from Lab 6) |
-| `src/switch_on_node.py` | Turns on the stop line filter and tag detector (from Lab 6) |
+| `src/switch_on_node.py` | Turns on the stop line filter, lane filter and tag detector |
 | `config/parking_lot.yaml` | Parking lot tags and the transforms between them |
-| `launch/intersections.launch` | Runs on the robot |
 | `launch/route_gui.launch` | Runs on your laptop |
 
-Bring in your own nodes from Lab 6 and your robot's `config/DUCKIEBOT_NAME.yaml`.
+Bring in from Lab 6: your nodes, your robot's `config/DUCKIEBOT_NAME.yaml`, and
+`launch/intersections.launch`. Inside its `<group>`, add
+
+```xml
+<rosparam file="$(find intersection_control)/config/parking_lot.yaml" ns="parking_lot"/>
+```
 
 
 ## Building and running

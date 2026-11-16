@@ -6,6 +6,7 @@ ECEN 433 - Lab 6
 Turns on the Duckietown nodes that start switched off on the robot:
 
     stop_line_filter_node     (part of your Lab 4 lane_following stack)
+    lane_filter_node          (part of your Lab 4 lane_following stack)
     apriltag_detector_node    (started by intersections.launch)
 
 Each one has a ~switch service (std_srvs/SetBool). This node waits for each
