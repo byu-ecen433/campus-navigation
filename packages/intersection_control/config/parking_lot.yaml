@@ -5,8 +5,6 @@
 # frame tag_pose.tag_in_robot reports.
 #   x, y   meters
 #   theta  radians, counter-clockwise from the entrance tag's x axis
-# Recomputed from /luigi/apriltag_detector_node/detections (frames with all of
-# tags 20, 24, 25, 26, 33 in view, averaged), using tag_pose.tag_in_robot's
 # frame math: stall pose = inverse(entrance pose) * stall pose. x is negative
 # because the stalls sit behind the entrance tags' printed faces.
 
