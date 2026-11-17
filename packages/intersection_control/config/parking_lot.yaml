@@ -19,13 +19,13 @@ entrances:
 stalls:                 # the stall number from the GUI is the index in this list
   - tag: 24
     pose:               # keyed by entrance tag
-      20: {x: -0.5646, y:  0.1652, theta:  0.3299}   # 18.9 deg
-      33: {x: -0.5314, y: -0.5405, theta:  0.2982}   # 17.1 deg
+      "20": {x: -0.5646, y:  0.1652, theta:  0.3299}   # 18.9 deg
+      "33": {x: -0.5314, y: -0.5405, theta:  0.2982}   # 17.1 deg
   - tag: 25
     pose:
-      20: {x: -0.5696, y:  0.3536, theta: -0.0177}   # -1.0 deg
-      33: {x: -0.5304, y: -0.3519, theta: -0.0494}   # -2.8 deg
+      "20": {x: -0.5696, y:  0.3536, theta: -0.0177}   # -1.0 deg
+      "33": {x: -0.5304, y: -0.3519, theta: -0.0494}   # -2.8 deg
   - tag: 26
     pose:
-      20: {x: -0.5953, y:  0.5201, theta:  0.1435}   # 8.2 deg
-      33: {x: -0.5508, y: -0.1847, theta:  0.1118}   # 6.4 deg
+      "20": {x: -0.5953, y:  0.5201, theta:  0.1435}   # 8.2 deg
+      "33": {x: -0.5508, y: -0.1847, theta:  0.1118}   # 6.4 deg
